@@ -5,6 +5,7 @@ import { Section } from "./component/Section";
 import Navbar from "./components/Navbar";
 import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
+import { Contact } from "./pages/Contact";
 
 function App() {
   const navItems = [
@@ -22,8 +23,11 @@ function App() {
       <Section id="about">
         <About />
       </Section>
-      <Section id="about">
+      <Section id="projects">
         <Projects />
+      </Section>
+      <Section id="contact">
+        <Contact />
       </Section>
     </>
   );
