@@ -4,6 +4,7 @@ import { Hero } from "./pages/Hero";
 import { Section } from "./component/Section";
 import Navbar from "./components/Navbar";
 import { About } from "./pages/About";
+import { Projects } from "./pages/Projects";
 
 function App() {
   const navItems = [
@@ -15,12 +16,14 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <Section id="home">
         <Hero />
       </Section>
       <Section id="about">
         <About />
+      </Section>
+      <Section id="about">
+        <Projects />
       </Section>
     </>
   );
