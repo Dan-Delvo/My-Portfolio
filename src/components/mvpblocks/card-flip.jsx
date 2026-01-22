@@ -23,6 +23,7 @@ export default function CardFlip({
   ],
   icon: IconComponent = Rocket,
   image = null,
+  link = null,
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
@@ -188,31 +189,54 @@ export default function CardFlip({
           </div>
 
           <div className="relative z-10 mt-auto border-t border-red-900/30 pt-4">
-            <div
-              className={cn(
-                "group/start relative",
-                "flex items-center justify-between",
-                "rounded-lg p-2.5",
-                "transition-all duration-300",
-                "bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900",
-                "hover:from-red-950/50 hover:via-red-900/30 hover:to-transparent",
-                "hover:scale-[1.02] hover:cursor-pointer",
-                "border border-transparent hover:border-red-800/40",
-              )}>
-              <span className="text-sm font-semibold text-white transition-colors duration-300 group-hover/start:text-red-400">
-                View Project
-              </span>
-              <div className="group/icon relative">
-                <div
-                  className={cn(
-                    "absolute inset-[-6px] rounded-lg transition-all duration-300",
-                    "bg-gradient-to-br from-red-900/30 via-red-800/20 to-transparent",
-                    "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100",
-                  )}
-                />
-                <ArrowRight className="relative z-10 h-4 w-4 text-red-500 transition-all duration-300 group-hover/start:translate-x-1 group-hover/start:scale-110" />
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "group/start relative",
+                  "flex items-center justify-between",
+                  "rounded-lg p-2.5",
+                  "transition-all duration-300",
+                  "bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900",
+                  "hover:from-red-950/50 hover:via-red-900/30 hover:to-transparent",
+                  "hover:scale-[1.02] hover:cursor-pointer",
+                  "border border-transparent hover:border-red-800/40",
+                )}>
+                <span className="text-sm font-semibold text-white transition-colors duration-300 group-hover/start:text-red-400">
+                  View Project
+                </span>
+                <div className="group/icon relative">
+                  <div
+                    className={cn(
+                      "absolute inset-[-6px] rounded-lg transition-all duration-300",
+                      "bg-gradient-to-br from-red-900/30 via-red-800/20 to-transparent",
+                      "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100",
+                    )}
+                  />
+                  <ArrowRight className="relative z-10 h-4 w-4 text-red-500 transition-all duration-300 group-hover/start:translate-x-1 group-hover/start:scale-110" />
+                </div>
+              </a>
+            ) : (
+              <div
+                className={cn(
+                  "group/start relative",
+                  "flex items-center justify-between",
+                  "rounded-lg p-2.5",
+                  "transition-all duration-300",
+                  "bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900",
+                  "border border-transparent",
+                  "opacity-50",
+                )}>
+                <span className="text-sm font-semibold text-white">
+                  View Project
+                </span>
+                <div className="group/icon relative">
+                  <ArrowRight className="relative z-10 h-4 w-4 text-red-500" />
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

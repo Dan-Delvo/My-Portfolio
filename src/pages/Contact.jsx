@@ -7,14 +7,14 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "delvodanjaspher@gmail.com",
-      link: "mailto:delvodanjaspher@gmail.com",
+      value: "dandelvo12345@gmail.com",
+      link: "mailto:dandelvo12345@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+63 966 460 3095",
-      link: "tel:+639664603095",
+      value: "+63 960 371 1178",
+      link: "tel:+639603711178",
     },
     {
       icon: MapPin,
@@ -131,7 +131,7 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center pt-8">
             <a
-              href="mailto:delvodanjaspher@gmail.com"
+              href="mailto:dandelvo12345@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-900 via-red-800 to-red-950 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-red-900/50 transition-all duration-300 hover:scale-105">
               <Mail className="w-5 h-5" />
               Send me an email

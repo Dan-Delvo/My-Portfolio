@@ -51,6 +51,7 @@ export function Projects() {
                 "Role-based Access Control",
                 "PDF/Excel Reports",
               ]}
+              link="https://popberry.site"
             />
             <CardFlip
               icon={SiFlutter}
@@ -77,6 +78,7 @@ export function Projects() {
                 "Transaction Tracking",
                 "REST API Integration",
               ]}
+              link="https://sandybrown-crane-809489.hostingersite.com/"
             />
           </div>
         </div>
